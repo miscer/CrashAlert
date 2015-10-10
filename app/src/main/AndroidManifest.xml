@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uk.ac.standrews.crashalert" >
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SensorActivity"
+            android:exported="true"
+            android:label="@string/title_activity_sensor" >
+        </activity>
+
+        <service
+            android:name=".SensorService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <activity
+            android:name=".StartActivity"
+            android:exported="true"
+            android:label="CrashAlert"
+            android:launchMode="singleTask">
+        </activity>
+
+        <service
+            android:name=".AlertService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+
+        <activity
+            android:name=".CrashActivity"
+            android:label="CrashAlert"
+            android:launchMode="singleTask">
+        </activity>
+
+        <activity android:name=".DescriptionActivity"
+            android:label="CrashAlert"></activity>
+
+        <activity android:name=".InformationActivity"
+            android:label="CrashAlert"></activity>
+
+        <activity android:name=".MedicalActivity"
+            android:label="CrashAlert"></activity>
+
+        <activity android:name=".NameActivity"
+            android:label="CrashAlert"></activity>
+
+        <activity android:name=".PhoneNumberActivity"
+            android:label="CrashAlert"></activity>
+    </application>
+
+</manifest>
